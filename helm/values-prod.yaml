@@ -10,7 +10,7 @@ service:
 image:
   repository: nemboche/techtrends
   image pullPolicy: Always
-  tag: main
+  tag: latest
 replicaCount: 5
 resources:
   requests:

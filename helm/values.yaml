@@ -1,10 +1,10 @@
-namespace: 
-   name: sandbox
+namespace:
+  name: sandbox
 
 image:
-   repository: techtrends
-   tag: main
-   PullPolicy: IfNotPresent
+  repository: nemboche/techtrends
+  tag: latest
+  PullPolicy: IfNotPresent
 
 replicaCount: 1
 
@@ -16,12 +16,12 @@ resources:
     cpu: 500m
     memory: 128Mi
   ports:
-    - containerPort: 4111         
+    - containerPort: 4111
   livenessProbe:
     httpGet:
-        path: /healthz
-        port: 3111
+      path: /healthz
+      port: 3111
   readinessProbe:
-      httpGet:
-        path: /healthz
-        port: 3111
+    httpGet:
+      path: /healthz
+      port: 3111

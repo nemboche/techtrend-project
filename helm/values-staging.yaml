@@ -1,14 +1,14 @@
 namespace:
-  name: staging 
- 
+  name: staging
+
 service:
   port: 5111
   targetPort: 3111
   protocol: TCP
   type: ClusterIP
 image:
-  repository: nembo/techtrends
-  tag: main
+  repository: nemboche/techtrends
+  tag: latest
   pullPolicy: IfNotPresent
 replicaCount: 3
 resources:
